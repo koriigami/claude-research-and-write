@@ -1,6 +1,6 @@
-# Content Skills Pack
+# Claude Research and Write
 
-Two Claude Code skills for research-backed content creation: **topic research** and **article writing**.
+Two Claude Code skills for research-backed content creation: **`/topic-research`** and **`/write-article`**.
 
 ## What's Included
 
