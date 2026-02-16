@@ -12,6 +12,7 @@
       "name": "topic-research",
       "source": "./topic-research",
       "description": "Generate research-backed topic lists organized by thematic pillars for any domain, audience, and content format",
+      "skills": ["./skills/topic-research"],
       "version": "1.0.0",
       "author": {
         "name": "Ketan Damle"
@@ -24,6 +25,7 @@
       "name": "write-article",
       "source": "./write-article",
       "description": "Write articles with inline citations supporting blog, newsletter, and LinkedIn formats",
+      "skills": ["./skills/write-article"],
       "version": "1.0.0",
       "author": {
         "name": "Ketan Damle"
