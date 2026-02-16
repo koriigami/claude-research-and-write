@@ -1,0 +1,36 @@
+{
+  "name": "claude-research-and-write",
+  "owner": {
+    "name": "Ketan Damle"
+  },
+  "metadata": {
+    "description": "Two Claude Code skills for research-backed content creation: topic research and article writing with inline citations",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "topic-research",
+      "source": "./topic-research",
+      "description": "Generate research-backed topic lists organized by thematic pillars for any domain, audience, and content format",
+      "version": "1.0.0",
+      "author": {
+        "name": "Ketan Damle"
+      },
+      "license": "MIT",
+      "keywords": ["content", "research", "topics", "articles", "writing"],
+      "category": "content"
+    },
+    {
+      "name": "write-article",
+      "source": "./write-article",
+      "description": "Write articles with inline citations supporting blog, newsletter, and LinkedIn formats",
+      "version": "1.0.0",
+      "author": {
+        "name": "Ketan Damle"
+      },
+      "license": "MIT",
+      "keywords": ["content", "writing", "articles", "blog", "citations"],
+      "category": "content"
+    }
+  ]
+}

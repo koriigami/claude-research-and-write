@@ -35,20 +35,27 @@ your-directory/
 
 ## Installation
 
-1. Clone or download this repo
-2. Copy the skill folders into your Claude Code skills directory:
+### Option 1: Claude Code Plugin (Official)
 
-```bash
-# Copy both skills
-cp -r topic-research ~/.claude/skills/
-cp -r write-article ~/.claude/skills/
+Register the marketplace and install individual skills:
 
-# Or for project-specific installation
-cp -r topic-research .claude/skills/
-cp -r write-article .claude/skills/
+```
+/plugin marketplace add koriigami/claude-research-and-write
+/plugin install topic-research@claude-research-and-write
+/plugin install write-article@claude-research-and-write
 ```
 
-3. The skills are now available as `/topic-research` and `/write-article` in Claude Code
+### Option 2: npx (via skills.sh)
+
+```bash
+npx skills add koriigami/claude-research-and-write
+```
+
+### Option 3: SkillsMP
+
+Browse and install from [skillsmp.com](https://skillsmp.com) — search for "topic-research" or "write-article".
+
+After installation, the skills are available as `/topic-research` and `/write-article` in Claude Code.
 
 ## Usage
 
