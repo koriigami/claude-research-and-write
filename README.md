@@ -1,25 +1,25 @@
 # Claude Research and Write
 
-Two Claude Code skills for research-backed content creation: **`/topic-research`** and **`/write-article`**.
+Two Claude Code skills for research-backed content creation: **`/koriigami-topic-research`** and **`/koriigami-write-article`**.
 
 ## What's Included
 
-### `/topic-research`
+### `/koriigami-topic-research`
 Generate a comprehensive, research-backed list of content topics organized by thematic pillars.
 
 **What it does:**
-- Asks about your domain, credentials, audience, and content format
+- Presents interactive options for domain, author, audience, format, and scope
 - Performs live web research for current trends, statistics, and content gaps
 - Generates 25-100 topics organized into thematic pillars
 - Each topic includes a rationale (SEO potential, content gap, audience resonance)
 - Identifies niche sub-audience angles, multi-part series, and biggest content gaps
 - Appends all research source URLs
 
-### `/write-article`
+### `/koriigami-write-article`
 Write a complete article with inline citations, following structured templates.
 
 **What it does:**
-- Works standalone OR picks up context from `/topic-research` output
+- Works standalone OR picks up context from `/koriigami-topic-research` output
 - Performs web research and saves sources to a separate research file
 - Writes blog articles (1,600-2,000 words), newsletters (500-800 words), or LinkedIn posts (200-400 words)
 - Every statistic gets an inline hyperlinked citation — no footnotes, no reference sections
@@ -41,8 +41,8 @@ Register the marketplace and install individual skills:
 
 ```
 /plugin marketplace add koriigami/claude-research-and-write
-/plugin install topic-research@claude-research-and-write
-/plugin install write-article@claude-research-and-write
+/plugin install koriigami-topic-research@claude-research-and-write
+/plugin install koriigami-write-article@claude-research-and-write
 ```
 
 ### Option 2: npx (via skills.sh)
@@ -51,37 +51,31 @@ Register the marketplace and install individual skills:
 npx skills add koriigami/claude-research-and-write
 ```
 
-### Option 3: SkillsMP
-
-Browse and install from [skillsmp.com](https://skillsmp.com) — search for "topic-research" or "write-article".
-
-After installation, the skills are available as `/topic-research` and `/write-article` in Claude Code.
+After installation, the skills are available as `/koriigami-topic-research` and `/koriigami-write-article` in Claude Code.
 
 ## Usage
 
 ### Research topics first, then write
 
 ```
-You: /topic-research
-Claude: What domain or niche is this for?
-You: B2B SaaS marketing
-Claude: Who is creating this content?
-You: I'm a solo founder who bootstrapped to $2M ARR...
-[...continues through questions, then generates 50+ topics]
+You: /koriigami-topic-research
+Claude: [Presents interactive options for domain, author, audience, format, scope]
+You: [Select options or type custom answers]
+Claude: [Researches trends and generates 50+ topics organized by pillars]
 
-You: /write-article
+You: /koriigami-write-article
 Claude: I found saas-marketing-article-topics.md. Which topic would you like to write about?
 You: Topic 12 — "Why Your Free Trial Is Killing Your Conversion Rate"
-[...writes full article with research and citations]
+Claude: [Researches topic, writes full article with inline citations]
 ```
 
 ### Write a standalone article
 
 ```
-You: /write-article Why remote teams burn out differently than office teams
+You: /koriigami-write-article Why remote teams burn out differently than office teams
 Claude: What domain or niche is this in?
 You: Workplace psychology / HR
-[...asks remaining questions, researches, writes]
+Claude: [Asks remaining questions, researches, writes]
 ```
 
 ## Content Formats

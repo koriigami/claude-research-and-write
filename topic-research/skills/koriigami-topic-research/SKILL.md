@@ -1,50 +1,72 @@
 ---
-name: topic-research
+name: koriigami-topic-research
 description: Generate a comprehensive, research-backed list of content topics organized by thematic pillars. Use when a user wants to brainstorm article ideas, plan a content calendar, identify content gaps, or research topics for blog posts, newsletters, or LinkedIn posts. Triggers on phrases like "research topics", "topic ideas", "content ideas", "what should I write about", "article ideas", "content plan".
 ---
 
-# /topic-research — Content Topic Research Skill
+# /koriigami-topic-research — Content Topic Research Skill
 
 Generate a structured, research-backed list of content topics organized by thematic pillars for any domain, audience, and content format.
 
-## Step 1: Gather Context (Ask These Questions)
+## Step 1: Gather Context
 
-Before researching, ask the user these questions **one at a time or grouped logically**. Do not skip any.
+Before researching, ask the user these questions using the `AskUserQuestion` tool. Present selectable options for each question so the user can pick quickly. Ask all questions in a single `AskUserQuestion` call with multiple questions.
 
 ### Question 1: Domain / Niche
-> What domain or niche is this for?
 
-Examples: "Life coaching", "B2B SaaS marketing", "Personal fitness", "Personal finance", "Web development", "Food & nutrition", "Travel"
+Question: "What domain or niche do you want to create content for?"
+
+Options (present these 8 as selectable choices — the user can also type their own):
+1. Personal Finance & Investing
+2. Health & Fitness
+3. AI & Machine Learning
+4. SaaS & Startups
+5. Mental Health & Wellness
+6. Food & Nutrition
+7. Web Development & Programming
+8. Digital Marketing
+
+The user can always provide a custom domain not in the list.
 
 ### Question 2: Author / Brand Profile
-> Who is creating this content? What are their credentials, expertise, and unique differentiators?
 
-This shapes authority positioning and content angles. Examples:
-- "Dr. Swapna Vithalkar, PhD — Life Coach & Sex Addiction Specialist, 20+ years, CBT/REBT/DBT/TA"
-- "Solo developer who bootstrapped a SaaS to $2M ARR"
-- "Certified nutritionist specializing in South Asian dietary patterns"
+Question: "Who is creating this content? Share their credentials and unique expertise."
+
+Present 3 contextual examples based on the domain chosen in Q1, plus a custom option. Examples should match the domain — e.g., if the user chose "Health & Fitness", show:
+1. "Certified Personal Trainer — 10 years, strength training specialist"
+2. "Registered Dietitian — clinical nutrition, plant-based focus"
+3. "Fitness content creator — 500K YouTube subscribers, home workouts"
+
+The user can always provide their own author/brand profile.
 
 ### Question 3: Target Audience
-> Who is the primary audience? Are there any niche sub-audiences worth targeting?
 
-Sub-audiences drive the "niche angle" topics within each pillar. Examples:
-- "Global English speakers + Indian diaspora + expats in Europe"
-- "Early-stage startup founders + solo developers + technical co-founders"
-- "Working professionals aged 25-40 + new parents + people with desk jobs"
+Question: "Who is the target audience? Select primary audience or describe your own."
+
+Present 3 contextual options based on the domain + author from Q1-Q2, plus custom. Examples should match — e.g., for "Health & Fitness" + "Personal Trainer":
+1. "Beginners aged 25-40, weight loss focused"
+2. "Busy professionals who want quick home workouts"
+3. "Postpartum mothers returning to fitness"
+
+The user can always describe their own audience.
 
 ### Question 4: Content Format
-> What content format are you creating?
 
-Options:
-- **Blog articles** — Educational, thought-leadership, or how-to posts (1,000-2,500 words)
-- **Newsletter** — Regular email content (300-800 words per edition)
-- **LinkedIn posts** — Professional social content (200-400 words)
-- User can select multiple formats
+Question: "What content format are you creating? (Select one or more)"
+
+Options (multi-select):
+1. Blog articles — Educational, thought-leadership, or how-to posts (1,000-2,500 words)
+2. Newsletter — Regular email content (300-800 words per edition)
+3. LinkedIn posts — Professional social content (200-400 words)
 
 ### Question 5: Scope
-> How many topics would you like? (Default: ~50)
 
-Options: 25, 50, 75, 100. More topics = more pillars and deeper niche coverage.
+Question: "How many topics would you like?"
+
+Options:
+1. 25 topics — Quick list, 3-5 pillars
+2. 50 topics (Recommended) — Balanced coverage, 6-8 pillars
+3. 75 topics — Deep coverage, 8-10 pillars
+4. 100 topics — Comprehensive, 10-12 pillars with niche angles
 
 ---
 
@@ -108,6 +130,17 @@ End with a "## Research Sources" section listing every URL used during research:
 - Include all sources referenced in topic rationales
 - Include trend reports, industry surveys, and data sources consulted
 
+### Next Steps Footer
+Always end the output file with this section:
+
+```markdown
+---
+
+## Next Steps
+
+Pick a topic from this list and write it using `/koriigami-write-article`.
+```
+
 ---
 
 ## Step 4: Save the File
@@ -129,6 +162,7 @@ Before delivering, verify:
 - [ ] All research sources are listed with working URLs
 - [ ] The metadata header includes: date, author/brand, content type, target audiences
 - [ ] Topic count approximately matches what the user requested
+- [ ] Next Steps footer is present pointing to `/koriigami-write-article`
 
 ---
 

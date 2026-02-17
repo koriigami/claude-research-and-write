@@ -9,10 +9,10 @@
   },
   "plugins": [
     {
-      "name": "topic-research",
+      "name": "koriigami-topic-research",
       "source": "./topic-research",
       "description": "Generate research-backed topic lists organized by thematic pillars for any domain, audience, and content format",
-      "skills": ["./skills/topic-research"],
+      "skills": ["./skills/koriigami-topic-research"],
       "version": "1.0.0",
       "author": {
         "name": "Ketan Damle"
@@ -22,10 +22,10 @@
       "category": "content"
     },
     {
-      "name": "write-article",
+      "name": "koriigami-write-article",
       "source": "./write-article",
       "description": "Write articles with inline citations supporting blog, newsletter, and LinkedIn formats",
-      "skills": ["./skills/write-article"],
+      "skills": ["./skills/koriigami-write-article"],
       "version": "1.0.0",
       "author": {
         "name": "Ketan Damle"

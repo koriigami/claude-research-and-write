@@ -1,17 +1,17 @@
 ---
-name: write-article
-description: Write a complete, research-backed article with inline citations. Supports blog posts, newsletters, and LinkedIn posts. Use when a user wants to write an article, draft a blog post, create a newsletter edition, compose a LinkedIn post, or says "write about [topic]". Works standalone or with output from /topic-research.
+name: koriigami-write-article
+description: Write a complete, research-backed article with inline citations. Supports blog posts, newsletters, and LinkedIn posts. Use when a user wants to write an article, draft a blog post, create a newsletter edition, compose a LinkedIn post, or says "write about [topic]". Works standalone or with output from /koriigami-topic-research.
 ---
 
-# /write-article — Article Writer Skill
+# /koriigami-write-article — Article Writer Skill
 
 Write a complete, research-backed article with inline citations, following structured templates for blog posts, newsletters, or LinkedIn posts.
 
 ## Step 0: Detect Entry Flow
 
-Before asking questions, check if the user is coming from `/topic-research`:
+Before asking questions, check if the user is coming from `/koriigami-topic-research`:
 
-### Flow A — From /topic-research output
+### Flow A — From /koriigami-topic-research output
 1. Search the current project for any `*-article-topics.md` file
 2. If found, read the file header to extract: author/brand, content type, target audiences
 3. Ask: "I found [filename]. Which topic would you like to write about?"
